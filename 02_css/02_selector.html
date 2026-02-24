@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS | Selector</title>
+  <link rel="stylesheet" href="css/02_selector.css">
+</head>
+<body>
+  <h1>Selector 선택자</h1>
+  <a href="https://www.w3schools.com/cssref/css_selectors.php">CSS Selector Reference</a>
+  
+  <h2>tag | id | class | attribute 선택자</h2>
+  <!-- div>ul>li#foo$.group{안녕$}*5
+    tag = 태그 이름으로 선택, id = #id, class = .class, 속성 = [attribute]
+  -->
+  <div>
+    <ul>
+      <li id="foo1" class="group1">안녕1</li>
+      <li id="foo2" class="group1" title="안녕2">안녕2</li>
+      <li id="foo3" class="group2" title="안녕3">안녕3</li>
+      <li id="foo4" class="group2">안녕4</li>
+      <li id="foo5" class="group1 group2">안녕5</li>
+    </ul>
+  </div>
+
+  <h2>자식 | 후손 선택자</h2>
+  <!-- div#parent>h4+ul>li*2
+    자식 선택자 > : 바로 아래 자식 요소 선택
+    후손 선택자 (공백) : 모든 하위 요소 선택
+  -->
+  <div id="parent">
+    <h4>Hello</h4>
+    <ul>
+      <li>안녕하세요</li>
+      <li>니하오</li>
+    </ul>
+    <div id="child">
+      <h4>Byebye</h4>
+      <ul>
+        <li>잘가요</li>
+        <li>짜이찌엔</li>
+      </ul>
+    </div>  
+  </div>
+
+  <h2>형제 선택자</h2>
+  <!-- div>p#p${Helloworld$}*5+pre{Helloworld6}
+    + : 바로 다음 형제 요소 선택
+    ~ : 다음 형제 요소 전체 선택
+  -->
+  <div>
+    <p id="p1">Helloworld1</p>
+    <p id="p2">Helloworld2</p>
+    <p id="p3">Helloworld3</p>
+    <p id="p4">Helloworld4</p>
+    <p id="p5">Helloworld5</p>
+    <pre>Helloworld6</pre>
+  </div>
+
+  <h2>가상클래스 선택자</h2>
+  <!-- div>(p#bar$>lorem)*2
+    :hover -> 마우스 올렸을 때
+    :active -> 클릭 중일 때
+  -->
+  <div>
+    <p id="bar1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quae cum, omnis laborum doloribus qui necessitatibus dignissimos ducimus ex blanditiis veritatis deleniti eaque maxime amet excepturi! Rerum nam quisquam dolorum.</p>
+    <p id="bar2">Mollitia dolorem maiores perspiciatis nisi voluptatum delectus magni ratione quis nemo cum sed quia doloribus quibusdam, blanditiis ipsa officiis facere animi deleniti dicta soluta exercitationem! Officia esse quas provident eos!</p>
+  </div>
+  
+  <!-- 위치 선택자 
+    :first-child -> 부모 안에서 첫 번째 자식 요소 선택
+    :last-child -> 부모 안에서 마지막 자식 요소 선택
+    :nth-child(n) -> 부모 안에서 n번째 자식 요소 선택
+  -->
+  <div id="season-wrapper">
+    <p>봄</p>
+    <p>여름</p>
+    <p>가을</p>
+    <p>겨울</p>
+    <p>봄</p>
+    <p>여름</p>
+    <p>가을</p>
+    <ul>
+      <li>spring</li>
+      <li>summer</li>
+      <li>autumn</li>
+      <li>winter</li>
+      <li>spring</li>
+      <li>summer</li>
+      <li>autumn</li>
+      <li>winter</li>
+    </ul>
+    <p>겨울</p>
+  </div>
+
+  <!-- 부정 선택자 :not() -> 특정 요소 제외 -->
+  <div>
+    <ul id="client-langs">
+      <li>HTML5</li>
+      <li id="css3">CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+  </div>
+
+  <!-- 루트 선택자 :root -> 문서의 최상위 요소 (html) -->
+
+  <!-- 가상 요소 선택자
+    ::before : 요소 내용 앞에 추가
+    ::after : 요소 내용 뒤에 추가
+  -->
+
+  <h2>가상요소 선택자</h2>
+  <ul id="price-list">
+    <li>3000</li>
+    <li>10000</li>
+    <li>500</li>
+  </ul>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
