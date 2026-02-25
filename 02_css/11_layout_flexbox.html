@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS | Layout - Flexbox</title>
+  <link rel="stylesheet" href="css/11_layout_flexbox.css">
+</head>
+
+<body>
+  <h1>Flexbox</h1>
+  <!-- @실습문제: https://flexboxfroggy.com/ -->
+  <!-- 
+    flexbox (메인축/크로스축)
+    grid (행열)
+
+    부모요소 flex-container : Flexbox 활성화 (내부 자식요소들을 유연하게 배치)
+      - display: flex (lexbox 활성화) | inline-flex
+      - flex-direction: row -> 가로 정렬 (기본값) | column (세로 정렬)
+      - justify-content: 메인축설정 flex-start(기본값) | center | flex-end | space-between | space-around | space-evenly
+      - align-items : 크로스 축설정 stretch(기본값) | baseline | center | flex-start | flex-end
+      - flex-wrap: 줄바꿈여부 nowrap(기본값) -> 줄바꿈 없음 | wrap -> 공간 부족 시 줄바꿈
+      - align-content: wrap속성이 지정된 여러축인 존재할때 적용. (세로 정렬)
+    자식요소 flex-item
+      - flex-basis: 아이템의 기본 크기. 기준 크기로 120 px을 확보한다. 
+      - flex-grow: 남는 공간이 있을 때 확장 비율. 컨테이너에 여유 공간이 남으면 1 비율만큼 늘어난다.
+      - flex-shrink: 공간이 부족할 때 축소 비율. 공간이 모자라면 1 비율만큼 줄어든다.
+      - align-self: 특정 자식요소에만 적용되는 속성.
+      - order : 아이템 배치 순서 변경
+  -->
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item order-first">2 (order -1)</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div>
+
+</body>
+
+</html>
